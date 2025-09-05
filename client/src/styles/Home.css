@@ -1,0 +1,28 @@
+.home {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.home .explore-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: black;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.home .explore-btn:hover {
+  background: #333;
+}

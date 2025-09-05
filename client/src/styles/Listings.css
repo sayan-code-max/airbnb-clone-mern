@@ -1,0 +1,103 @@
+.listings-container {
+  position: relative;
+  top: 6rem;        /* push below navbar */
+  left: 10%;        /* match navbar */
+  width: 80%;       /* match navbar */
+  padding: 1rem 0;  /* inner spacing */
+}
+
+
+.listings-search {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: flex-start; /* align left within container */
+}
+
+
+
+
+.listings-search input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  position: relative;
+  left: -500px;
+}
+
+.listings-search input:focus {
+  outline: none;
+  border-color: #111827;
+}
+
+.listings-search .search-btn {
+  padding: 0.6rem 1.2rem;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.listings-search .search-btn:hover {
+  background: #333;
+}
+
+/* --- Grid of cards --- */
+.listings-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* --- Individual card --- */
+.listing-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* image placeholder */
+.listing-card .image {
+  height: 160px;
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+}
+
+/* card details */
+.listing-card .details {
+  padding: 0.75rem;
+}
+
+.listing-card .title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.listing-card .location {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.listing-card .price {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.listing-card .price span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}

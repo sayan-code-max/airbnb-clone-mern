@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  top: -1px;
+  left: 10%;
+  height: 60px;
+  width: 80%;
+  padding: 20px 10%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: solid 0.2px white;
+  background-color: rgba(117, 111, 117, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.Logo {
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+}
+
+nav {
+  background-color: rgba(117, 111, 117, 0);
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}

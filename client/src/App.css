@@ -1,0 +1,291 @@
+/* === Global Reset & Body === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #111;
+  padding-top: 80px; /* offset for fixed navbar */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Navbar === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 10%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: solid 0.2px white;
+  background-color: rgba(117, 111, 117, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.Logo {
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/* === Page Containers === */
+.page-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* === Home === */
+.home {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.explore-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: black;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #333;
+}
+
+/* === Listings (Explore) === */
+.listings-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.listings-search {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.listings-search input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.listings-search input:focus {
+  outline: none;
+  border-color: #111827;
+}
+
+.search-btn {
+  padding: 0.6rem 1.2rem;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #333;
+}
+
+.listings-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.listing-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.listing-card .image {
+  height: 160px;
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+}
+
+.listing-card .details {
+  padding: 0.75rem;
+}
+
+.listing-card .title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.listing-card .location {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.listing-card .price {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* === Dashboard === */
+.dashboard h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard .subtitle {
+  color: #6b7280;
+}
+
+/* === Bookings === */
+.bookings h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.booking-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.booking-card .title {
+  font-weight: 600;
+}
+
+.booking-card .dates {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.booking-card .price {
+  font-size: 0.875rem;
+}
+
+/* === Forms (Login, Register, ListingForm) === */
+.form-container,
+.login-container,
+.register-container {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+form button {
+  background: black;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #333;
+}
+
+/* === Listing Detail === */
+.detail-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .detail-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.detail-info h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.detail-info .location {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.detail-booking {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  padding: 1rem;
+}
+
+.detail-booking .price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}

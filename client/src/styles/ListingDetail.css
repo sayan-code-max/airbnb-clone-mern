@@ -1,0 +1,55 @@
+.detail-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .detail-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.detail-info h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.detail-info .location {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.detail-booking {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  padding: 1rem;
+}
+
+.detail-booking .price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.detail-booking input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.detail-booking button {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.detail-booking button:hover {
+  background: #333;
+}

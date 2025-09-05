@@ -1,0 +1,30 @@
+.bookings {
+  padding: 1rem;
+}
+
+.bookings h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.booking-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.booking-card .title {
+  font-weight: 600;
+}
+
+.booking-card .dates {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.booking-card .price {
+  font-size: 0.875rem;
+}
