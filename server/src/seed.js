@@ -190,11 +190,11 @@ import User from "./models/User.js";
 
 dotenv.config();
 
-const MONGO_URL = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/airbnb_clone";
+const MONGO_URI = process.env.MONGO_URI;
 
 async function seed() {
   try {
-    await mongoose.connect(MONGO_URL);
+  await mongoose.connect(MONGO_URI);
     console.log("✅ Connected to MongoDB");
 
     // Clear old data

@@ -16,7 +16,7 @@ app.use(morgan("dev"));
 app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || "http://localhost:5173",
+  origin: process.env.CORS_ORIGIN || "https://airbnb-clone-mern-5fnu.vercel.app",
   credentials: true
 }));
 
